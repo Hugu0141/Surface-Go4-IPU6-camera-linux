@@ -65,6 +65,7 @@ Key points:
 - **No GPU acceleration**: libcamera 0.7.0 has experimental GPU-accelerated Soft ISP support, but it was not available in this build configuration.
 - **Firefox Snap**: The Snap sandbox prevents access to PipeWire camera nodes. Use the native `.deb` version of Firefox.
 - **Suspend/resume**: IPU6 firmware re-authentication may fail after waking from suspend on some kernel versions.
+- **Exposure flickering**: When exposed to strong light, the image starts flickering rapidly and does not recover. The auto-exposure algorithm in the Soft ISP appears to oscillate when overloaded, causing extreme brightness fluctuations that persist until the camera is restarted.
 
 ---
 
