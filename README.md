@@ -2,6 +2,10 @@
 
 Getting the built-in IPU6 MIPI camera working on Linux using mainline kernel drivers and libcamera, without any proprietary or out-of-tree components.
 
+
+![Camera working on Ubuntu 25.10](docs/Screenshot%20From%202026-04-04%2003-35-26.png)
+
+
 Tested on **Microsoft Surface Go 4** with **Ubuntu 25.10 (Questing)**.
 
 ---
