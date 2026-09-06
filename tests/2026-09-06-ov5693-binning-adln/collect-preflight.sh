@@ -38,9 +38,7 @@ run_shell() {
 
 {
     echo "collected_at=$(date --iso-8601=seconds 2>/dev/null || date)"
-    echo "hostname=$(hostname 2>/dev/null || true)"
-    echo "user=$(id -un 2>/dev/null || true)"
-    echo "uid=$(id -u 2>/dev/null || true)"
+    echo "test=Surface Go 4 OV5693 2x2-binning / ADL-N preflight"
 } >"${OUT_DIR}/00-metadata.txt"
 
 run "01-uname" uname -a
@@ -76,9 +74,10 @@ Preflight snapshot for the Surface Go 4 OV5693 2x2-binning / ADL-N test.
 Run this collector before modifying the currently working camera stack.
 For the most complete dmesg output, run it with sudo:
 
-  sudo ./collect-preflight.sh
+  sudo bash ./collect-preflight.sh
 
-Review files before committing in case the local environment contains information you do not want to publish.
+Review every generated file before committing it to the public repository.
+In particular, kernel command lines and dmesg output can occasionally contain machine-specific details.
 EOF
 
 echo "Preflight evidence written to: ${OUT_DIR}"
